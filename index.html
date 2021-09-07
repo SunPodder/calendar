@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" >
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h2 class="center" id="display">
+    <button class="left" onclick="prevMonth()">
+      <i class="fa fa-arrow-left" ></i>
+    </button>
+    <span id="month" contenteditable onblur="updateWithInput()"></span>, 
+    <span id="year" contenteditable onblur="updateWithInput()"></span>
+    <button class="right"  onclick="nextMonth()">
+      <i class="fa fa-arrow-right"></i>
+    </button>
+  </h2>
+  <div id="calendar" ></div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

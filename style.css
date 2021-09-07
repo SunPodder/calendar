@@ -1,0 +1,41 @@
+body {
+  color:white;
+  background:black;
+  width:100vw;
+  height:100vh;
+  margin:0;
+}
+*{
+  color:white;
+}
+#calendar{
+  width:100vw;
+}
+#calendar > table {
+  width:100vw;
+  border-collapse:collapse;
+}
+td, th{
+  text-align:center;
+  height:20vw;
+}
+.center {
+  text-align:center;
+}
+.left {
+  float:left;
+}
+.right {
+  float:right;
+}
+button {
+  background:black;
+  border:none;
+}
+button > i{
+  font-size:6vw;
+  margin:0 4vw;
+}
+span:hover{
+  outline:none;
+}
