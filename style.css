@@ -36,6 +36,6 @@ button > i{
   font-size:6vw;
   margin:0 4vw;
 }
-*:hover{
+button:hover, span:focus{
   outline:none;
 }
