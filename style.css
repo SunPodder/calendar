@@ -39,3 +39,12 @@ button > i{
 button:hover, span:focus{
   outline:none;
 }
+.jade-border{
+  border:1.5px solid #00A884;
+}
+td:hover{
+  border:1px solid blue;
+}
+td:last-child, th:last-child {
+  color:red;
+}
