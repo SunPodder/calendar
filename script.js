@@ -1,8 +1,12 @@
 const container = document.querySelector("#calendar"),
   months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-var currentMonth = 9, currentYear = 2021,
+var currentMonth = new Date().getMonth() + 1,
+  currentYear = new Date().getYear() + 1900,
   monthCon = document.querySelector("#month"),
   yearCon = document.querySelector("#year")
+const todayDate = new Date().getDate(),
+  todayMonth = new Date().getMonth(),
+  todayYear = new Date().getYear() + 1900
 
 function createCalendar(elem, year, month){
   let mon = month - 1
@@ -12,9 +16,13 @@ function createCalendar(elem, year, month){
   for(let i = 0;i < getDay(d);i++){
     table += "<td></td>"
   }
-
   while(d.getMonth() == mon){
-    table += `<td>${d.getDate()}</td>`
+    let date = d.getDate()
+    if(date == todayDate && mon == todayMonth && todayYear == currentYear){
+      table += `<td class="jade-border">${date}</td>`
+    }else{
+      table += `<td>${date}</td>`
+    }
     if(getDay(d) % 7 == 6){
       table += "</tr><tr>"
     }
@@ -59,9 +67,10 @@ function prevMonth(){
 function updateWithInput(){
   currentYear = +(yearCon.innerHTML)
   let m = monthCon.innerHTML.trim()
+  console.log(m)
   months.forEach(month => {
     if(m == month){
-      currentMonth = (months.indexOf(month) + 1)
+      currentMonth = months.indexOf(month) + 1
     }
   })
   render()
