@@ -66,8 +66,8 @@ function prevMonth(){
 
 function updateWithInput(){
   currentYear = +(yearCon.innerHTML)
-  let m = monthCon.innerHTML.trim()
-  console.log(m)
+  let m = monthCon.innerHTML
+  m.trim()
   months.forEach(month => {
     if(m == month){
       currentMonth = months.indexOf(month) + 1
